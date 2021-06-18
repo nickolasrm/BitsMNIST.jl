@@ -18,7 +18,6 @@
 	@test isfile("./test.jld2")
 
 	ltset = BitsMNIST.IO.load("./test.jld2")
-	display(ltset)
 	@test sum(ltset["model"](sx[1]) .== model(sx[1])) == 2
 
 end

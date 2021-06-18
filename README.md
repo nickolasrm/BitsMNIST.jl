@@ -80,7 +80,7 @@ The first step towards reinforcement learning is to define an evaluation functio
 ```julia
 score_fitness = BitsMNIST.ZeroOne.Reinforcement.generate_score_fitness(sx, sy)
 ```
-This first function increases the score of a model by summing the value of the respective output when predicted correctly. `if predicted_correctly, then score += argmax(model_output)`
+This first function increases the score of a model by summing the value of the respective output when predicted correctly. `if predicted_correctly, then score += max(model_output)`
 
 ```julia
 mcc_fitness = BitsMNIST.ZeroOne.Reinforcement.generate_mcc_fitness(sx, sy)
@@ -94,7 +94,7 @@ Another required step before start training is to configure our genetic algorith
 tset = Genetic.TrainingSet(
 	model, #The model we are gonna train
 	model.layers, #The layers we want it to optimize,
-	mutationRate=0.05 #Mutation rate reduced to 0.05 for this problem)
+	mutationRate=0.05) #Mutation rate reduced to 0.05 for this problem
 ```
 
 Other properties can also be configured, but for this example it is enough for what we want to test. Check out these settings at the [TinyML](https://github.com/ATISLabs/TinyML.jl/) page.
