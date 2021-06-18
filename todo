@@ -1,0 +1,7 @@
+Todos:
+  ☐ Predict 0 or 1:
+    ✔ Use 50% of 0 and 50% of 1 @done(21-06-14 17:49)
+    ✔ Add MCC to fitness output @done(21-06-17 16:02)
+    ☐ Use PCA to reduce the number of dimensions on the dataset examples
+  ☐ Dataset treatment:
+    ☐ Use a machine learning method (DBScan or KMeans) to find the most important examples
