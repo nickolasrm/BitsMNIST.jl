@@ -5,6 +5,10 @@ os:
   - linux
   - windows
 
+branches:
+  only:
+  - /.*/
+
 julia:
   - 1.6
 
